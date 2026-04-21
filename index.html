@@ -1,78 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Zeerak Ajmal | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: #1e293b;
-    }
-    h1 {
-      margin: 0;
-      font-size: 40px;
-    }
-    p {
-      color: #94a3b8;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeerak Ajmal | Portfolio</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b1120;
+  color: #e5e7eb;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: rgba(15, 23, 42, 0.8);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #38bdf8;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 5px;
+}
+
+/* SECTION */
+section {
+  padding: 60px 10%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Zeerak Ajmal</h1>
-  <p>Data Science | Machine Learning | SQL</p>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <div><strong>Zeerak</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section>
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm <span>Zeerak Ajmal</span></h1>
+  <p>Data Scientist | Machine Learning | SQL</p>
+  <a href="#projects" class="btn">View My Work</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
   <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a Data Science student with a background in Civil Engineering, 
-      passionate about AI, Machine Learning, and research in 3D reconstruction.
-    </p>
-  </div>
+  <p>
+    I am a Data Science student with a Civil Engineering background, 
+    focused on Machine Learning, AI, and research in 3D reconstruction.
+  </p>
+</section>
 
+<!-- PROJECTS -->
+<section id="projects">
   <h2>Projects</h2>
-  <div class="card">
-    <p><strong>ML Project:</strong> Built supervised learning models.</p>
-    <p><strong>SQL Analysis:</strong> Database querying and optimization.</p>
-  </div>
+  <div class="grid">
 
-  <h2>Skills</h2>
-  <div class="card">
-    <p>Python | SQL | Machine Learning | Data Analysis</p>
-  </div>
+    <div class="card">
+      <h3>Machine Learning Model</h3>
+      <p>Built supervised learning models for prediction tasks.</p>
+      <a href="#">View Project</a>
+    </div>
 
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: your@email.com</p>
-    <p><a href="#">GitHub Profile</a></p>
+    <div class="card">
+      <h3>SQL Data Analysis</h3>
+      <p>Optimized queries and analyzed large datasets.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>3D Research Work</h3>
+      <p>Working on point cloud reconstruction using AI.</p>
+      <a href="#">View Project</a>
+    </div>
+
   </div>
 </section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+  <p><a href="#">GitHub</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Zeerak Ajmal</p>
+</footer>
 
 </body>
 </html>
